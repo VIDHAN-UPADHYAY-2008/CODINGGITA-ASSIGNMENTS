@@ -1,6 +1,6 @@
 # Assignment 4 — Conditional Statements, Nested Conditions & Match-Case
 
-```python
+
 # Q1
 n=int(input())
 if n>0: print("Positive Number")
