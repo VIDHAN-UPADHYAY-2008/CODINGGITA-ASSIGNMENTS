@@ -1,12 +1,17 @@
 
+
 // Assignment: Introduction to Variables and Datatypes
 // Part I: Variables (let, var, const)
 
+
 // ==================== PART A ====================
 
+
 // Q1. Personal Information
-// Declare variables for name, age, and city using appropriate keywords.
-// Assign values and print all three variables.
+// Question: Declare variables for name, age, and city using appropriate
+// variable keywords. Assign values and print all three variables.
+
+// Answer:
 
 let name = "Rahul";
 let age = 18;
@@ -16,12 +21,14 @@ console.log("Name:", name);
 console.log("Age:", age);
 console.log("City:", city);
 
-// Explanation: let is used to create variables whose values can change.
+// Explanation: let is used to declare variables whose values can change.
 
 
 // Q2. Change the Score
-// Create a variable score with the value 50.
-// Change its value to 80 and print the final value.
+// Question: Create a variable score with the value 50. Change its value
+// to 80 and print the final value. Use the appropriate keyword.
+
+// Answer:
 
 let score = 50;
 score = 80;
@@ -32,8 +39,10 @@ console.log("Final Score:", score);
 
 
 // Q3. Constant Value
-// Create a constant variable PI with the value 3.14.
-// Print its value without changing it.
+// Question: Create a constant variable PI with the value 3.14.
+// Print its value. Do not try to change the value.
+
+// Answer:
 
 const PI = 3.14;
 
@@ -43,8 +52,10 @@ console.log("Value of PI:", PI);
 
 
 // Q4. Uninitialized Variables
-// Declare num1 using var and num2 using let without values.
-// Print both variables, assign values, and print them again.
+// Question: Declare num1 using var and num2 using let without values.
+// Print both variables. Then assign values and print them again.
+
+// Answer:
 
 var num1;
 let num2;
@@ -56,15 +67,19 @@ num2 = 20;
 
 console.log("After assigning:", num1, num2);
 
-// Explanation: Variables declared without values contain undefined
-// until a value is assigned.
+// Explanation: Both variables initially contain undefined.
+// After assigning values, they contain 10 and 20.
 
 
 // ==================== PART B ====================
 
+
 // Q5. Choose the Correct Keyword
-// studentName and schoolName will not change.
-// marks may change. Assign values and change marks.
+// Question: Create studentName, marks, and schoolName using appropriate
+// keywords. studentName and schoolName will not change, but marks may
+// change. Assign values, change marks, and print all variables.
+
+// Answer:
 
 const studentName = "Rahul";
 let marks = 50;
@@ -81,8 +96,11 @@ console.log("School Name:", schoolName);
 
 
 // Q6. Understand Scope
-// Declare var, let, and const inside an if block.
-// Try to access them outside the block.
+// Question: Declare var, let, and const variables inside an if block.
+// Try to access all three variables outside the block.
+// Identify which variables can be accessed.
+
+// Answer:
 
 if (true) {
     var a = 10;
@@ -97,12 +115,15 @@ console.log("Outside block:", a);
 // console.log(c); // Error
 
 // Explanation: var can be accessed outside the if block.
-// let and const are limited to the block where they are declared.
+// let and const are block-scoped and cannot be accessed outside it.
 
 
 // Q7. Test Re-declaration
-// Declare a variable using var twice.
-// Try the same experiment using let.
+// Question: Declare a variable named user using var and declare it
+// again with a different value. Repeat using let. Identify which
+// declaration allows re-declaration.
+
+// Answer:
 
 var user = "Rahul";
 var user = "Amit";
@@ -118,8 +139,11 @@ console.log("User:", user);
 
 
 // Q8. Test Re-assignment
-// Create variables using var, let, and const.
-// Assign initial values and try to change them.
+// Question: Create three variables using var, let, and const.
+// Assign an initial value to each. Try to change all three values.
+// Identify which variables allow re-assignment.
+
+// Answer:
 
 var first = 10;
 let second = 20;
@@ -128,7 +152,7 @@ const third = 30;
 first = 15;
 second = 25;
 
-// third = 35; // Error: const cannot be reassigned.
+// third = 35; // Error
 
 console.log("Var value:", first);
 console.log("Let value:", second);
@@ -136,13 +160,18 @@ console.log("Const value:", third);
 
 // Explanation: var and let allow re-assignment.
 // const does not allow re-assignment.
-// The const error is commented out so the program can run.
+// The error line is commented out so the program can run.
 
 
 // ==================== PART C ====================
 
+
 // Q9. Predict and Explain
-// Predict the output and identify the lines that cause errors.
+// Question: Without running the code, predict the output of each
+// console.log() and identify which lines cause errors.
+// Explain using scope, re-assignment, and variable declaration.
+
+// Given Code:
 
 var x = 10;
 
@@ -152,19 +181,37 @@ if (true) {
     const z = 40;
 }
 
-console.log(x); // Output: 20
-// console.log(y); // Error: y is block-scoped.
-// console.log(z); // Error: z is block-scoped.
+// Answer:
 
-// Explanation: var is not limited to the if block.
-// The second declaration changes x to 20.
-// let and const cannot be accessed outside their block.
-// The error lines are commented out so the program can run.
+console.log(x); // Output: 20
+// console.log(y); // Error
+// console.log(z); // Error
+
+// Explanation: x prints 20 because var is not block-scoped.
+// y and z cause errors because let and const are block-scoped.
+// They cannot be accessed outside the if block.
 
 
 // Q10. Fix the Program
-// Correct the errors related to initialization,
-// re-declaration, re-assignment, and scope.
+// Question: Fix the program so that it runs correctly.
+// Follow the rules for initialization, re-declaration,
+// re-assignment, and scope.
+
+// Given Code:
+
+// const name;
+// let age = 20;
+// let age = 25;
+// if (true) {
+//     var city = "Delhi";
+//     let country = "India";
+// }
+// console.log(country);
+// const score = 50;
+// score = 80;
+
+
+// Answer:
 
 const personName = "Rahul";
 
@@ -186,9 +233,8 @@ const finalScore = 50;
 console.log("Score:", finalScore);
 
 // Explanation:
-// const must be initialized when declared.
-// let can be reassigned but cannot be redeclared
-// in the same scope.
-// country is printed inside its block.
-// const cannot be reassigned.
-// var can be accessed outside the if block.
+// 1. const must be initialized when declared.
+// 2. let can be reassigned but not redeclared in the same scope.
+// 3. country must be accessed inside its block.
+// 4. const cannot be reassigned.
+// 5. var can be accessed outside the if block.
