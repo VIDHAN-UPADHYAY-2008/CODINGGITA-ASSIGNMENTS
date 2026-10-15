@@ -272,23 +272,30 @@ Part C] Relational Operators
 5. Greater Than (>)
 
 • Q: Marks 78, passing 40. Check if student scored more than passing marks.
-	• A: 78 > 40 \(\rightarrow \) true
+	• A: 78 > 40  true
 	
 • Q: Temp today 35°C, yesterday 28°C. Check if today is hotter.
-	• A: 35 > 28 \(\rightarrow \) true
+
+	• A: 35 > 28  true
 • Q: Predict output: console.log(15 > 10); console.log(10 > 15); console.log(10 > 10);
+
 	• A: true, false, false
 	
-• Q: Predict output: console.log("20" > 15); console.log("5" > "10"); console.log("abc" > 10);
+	
+• Q: Predict output: console.log("20" > 15); console.log("5" > "10"); console.log("abc" > 10)
+
 	• A: true (string "20" becomes number 20), true (alphabetical comparison: "5" comes after "1"), false ("abc" becomes NaN, any comparison with NaN is false)
 	
 • Q: Result of null > 0 and undefined > 0? Explain.
-	• A: Both are false. null becomes 0 (\(0 > 0\) is false). undefined becomes NaN, which always returns false.
+
+	• A: Both are false. null becomes 0 . undefined becomes NaN, which always returns false.
 	
 • Q: Stock 120, customer wants 85. Condition using > to check if stock is sufficient.
+
 	• A: 120 >= 85 (or 120 > 84)
 	
 • Q: Predict and explain: console.log(true > false); console.log("10" > "2"); console.log(NaN > 5);
+
 	• A:
 		• true (true becomes 1, false becomes 0, so \(1 > 0\))
 		• false (string comparison looks at first characters: "1" is smaller than "2")
@@ -297,25 +304,34 @@ Part C] Relational Operators
 
 6. Less Than (<)
 
+
+
 • Q: Box max 50 kg, current 42 kg. Check if more items can be added.
+
 	• A: 42 < 50 \(\rightarrow \) true
 	
 • Q: Age 16, min required 18. Check if person is underage.
+
 	• A: 16 < 18 \(\rightarrow \) true
 	
 • Q: Predict output: console.log(8 < 12); console.log(20 < 10); console.log(7 < 7);
+
 	• A: true, false, false
 	
 • Q: Predict output: console.log("8" < 10); console.log("20" < "3"); console.log("hello" < 5);
+
 	• A: true ("8" becomes number 8), true (string comparison: "2" comes before "3"), false ("hello" becomes NaN)
 	
 • Q: Result of null < 0 and undefined < 0? Explain.
+
 	• A: Both are false. null becomes 0 (\(0 < 0\) is false). undefined becomes NaN (always false).
 	
 • Q: Tank capacity 500L, current 375L. Condition using < to check if not full.
+
 	• A: 375 < 500
 	
 • Q: Predict and explain: console.log(false < true); console.log("5" < "15"); console.log(NaN < 10);
+
 
 	• A:
 	
@@ -324,26 +340,34 @@ Part C] Relational Operators
 		• false (NaN makes it false)
 
 7. Greater Than or Equal To (>=)
+8. 
 
 • Q: Distinction 75, student scored 75. Check if they get distinction.
+
 	• A: 75 >= 75 \(\rightarrow \) true
 	
 • Q: Ticket ₹300, person has ₹300. Check if they can buy.
+
 	• A: 300 >= 300 \(\rightarrow \) true
 	
 • Q: Predict output: console.log(25 >= 25); console.log(30 >= 25); console.log(20 >= 25);
+
 	• A: true, true, false
 	
 • Q: Predict output: console.log("25" >= 25); console.log("10" >= "2"); console.log(null >= 0);
+
 	• A: true (converts to number), false (string "1" is smaller than "2"), true (null becomes 0, and \(0 \geq 0\) is true)
 	
 • Q: Result of undefined >= 0? Explain.
+
 	• A: false. undefined becomes NaN, and NaN is never greater than or equal to anything.
 	
 • Q: Lift max 8 people, current 8 people. Condition using >= to check if full/overloaded.
+
 	• A: 8 >= 8
 	
 • Q: Predict and explain: console.log(true >= 1); console.log("" >= 0); console.log(NaN >= NaN);
+
 
 	• A:
 		• true (true becomes 1, so \(1 \geq 1\))
@@ -354,14 +378,18 @@ Part C] Relational Operators
 		
 
 8. Less Than or Equal To (<=)
+9. 
 
 • Q: Max speed limit 60, vehicle going 60. Check if within limit.
+
 
 	• A: 60 <= 60 \(\rightarrow \) true
 • Q: Needs 40 to pass, scored 39. Check if failed.
 
+
 	• A: 39 < 40 (or 39 <= 39) \(\rightarrow \) true
 • Q: Predict output: console.log(15 <= 20); console.log(20 <= 15); console.log(15 <= 15);
+
 
 	• A: true, false, true
 • Q: Predict output: console.log("15" <= 20); console.log("30" <= "5"); console.log(null <= 0);
@@ -408,3 +436,64 @@ Mixed Practice (>, <, >=, <=)
 
 	• A: "10" > "2" compares strings alphabetically character-by-character; the character "1" comes before "2", making it false. 10 > 2 compares actual numerical values, so it is true.
 	
+
+
+
+
+**Q:** Distinction 75, student scored 75. Check if they get distinction.
+
+**A:**
+```javascript
+let marks = 75;
+console.log(marks >= 75);
+```
+Output: true
+
+**Q:** Ticket ₹300, person has ₹300. Check if they can buy.
+
+**A:**
+```javascript
+let ticket = 300;
+let money = 300;
+console.log(money >= ticket);
+```
+Output: true
+
+**Q:** Predict the output.
+
+**A:**
+```javascript
+console.log(25 >= 25);
+console.log(30 >= 25);
+console.log(20 >= 25);
+```
+Output:
+```text
+
+true
+
+true
+
+false
+
+```
+
+**Q:** Predict the output.
+
+**A:**
+
+```javascript
+
+console.log("25" >= 25);
+
+console.log("10" >= "2");
+
+console.log(null >= 0);
+
+```
+Output:
+```text
+true
+false
+true
+```
